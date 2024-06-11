@@ -6,4 +6,7 @@ _____________________________________________
 Libraries Install Instruction
 
 OpenCV for detecting markers.
-$- pip install cv2
+$ - pip install opencv-contrib-python
+
+Image utils for basic image operations
+$ - pip install imutils
