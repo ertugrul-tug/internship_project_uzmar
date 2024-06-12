@@ -42,6 +42,8 @@ def camera():
             corners_data = [[ids[i][0], corners[i]] for i in range(len(ids))]
 
             if len(corners) == 4:
+
+                # Get corner data and assign them accordingly
                 refPts = [None] * 4
                 for i in range(4):
                     if corners_data[i][0] == 0:
