@@ -25,3 +25,11 @@ pip install opencv-contrib-python-headless==4.5.5.62
 
 pip install opencv-python pygame PyOpenGL PyOpenGL_accelerate
 
+pip install PyOpenGL PyOpenGL_accelerate
+pip install numpy-stl
+
+pip install pywavefront
+
+pip install pyglet
+
+pip install open3d
