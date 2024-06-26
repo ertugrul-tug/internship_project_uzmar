@@ -33,3 +33,5 @@ pip install pywavefront
 pip install pyglet
 
 pip install open3d
+
+pip install pyqt5

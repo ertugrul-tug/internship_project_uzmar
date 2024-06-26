@@ -23,7 +23,7 @@ class VideoWidget(QWidget):
         self.setLayout(self.vbox)
 
         # Setup video capture
-        self.cap = cv2.VideoCapture(0)  # Change camera index if needed
+        self.cap = cv2.VideoCapture(3)  # Change camera index if needed
         self.timer = QTimer(self)
         self.timer.setInterval(20)  # Update at 50 fps
         self.timer.timeout.connect(self.update_frame)

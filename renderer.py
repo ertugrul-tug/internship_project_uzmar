@@ -24,11 +24,11 @@ class VideoWidget(QWidget):
         self.setLayout(self.vbox)
 
         # Setup video capture
-        self.cap = cv2.VideoCapture(0)  # Change camera index if needed
+        self.cap = cv2.VideoCapture(3)  # Change camera index if needed
         self.content = cv2.imread('uzmar.jpg')
         self.content = imutils.resize(self.content, width=600)
         self.imgH, self.imgW = self.content.shape[:2]
-        self.dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_5X5_250)
+        self.dictionary = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_6X6_250)
 
         self.anchor_marker_id = None
         self.last_seen_marker = None
@@ -44,7 +44,7 @@ class VideoWidget(QWidget):
             print("Failed to grab frame")
             return
 
-        arucoParams = cv2.aruco.DetectorParameters_create()
+        arucoParams = cv2.aruco.DetectorParameters()
         corners, ids, _ = cv2.aruco.detectMarkers(frame, self.dictionary, parameters=arucoParams)
 
         if ids is not None:
